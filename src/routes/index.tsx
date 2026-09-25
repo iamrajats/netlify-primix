@@ -747,11 +747,11 @@ function CTA() {
             <Mail size={18} className="text-blue-500" />
             hello@primixlabs.com
           </a>
-          <a href="tel:+919310396520" className="flex items-center gap-3 hover:text-white transition-colors">
+          <a href="tel:+918766220922" className="flex items-center gap-3 hover:text-white transition-colors">
             <Phone size={18} className="text-blue-500" />
-            +91 9310396520
+            +91 8766220922
           </a>
-          <a href="https://wa.me/919310396520" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+          <a href="https://wa.me/918766220922" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
             <MessageCircle size={18} className="text-green-500" />
             WhatsApp
           </a>
@@ -796,8 +796,8 @@ function Footer() {
               <p className="text-white font-semibold text-sm mb-4">Contact</p>
               <div className="flex flex-col gap-3">
                 <a href="mailto:hello@primixlabs.com" className="text-slate-500 hover:text-white text-sm transition-colors">hello@primixlabs.com</a>
-                <a href="tel:+919310396520" className="text-slate-500 hover:text-white text-sm transition-colors">+91 9310396520</a>
-                <a href="https://wa.me/919310396520" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white text-sm transition-colors">WhatsApp</a>
+                <a href="tel:+918766220922" className="text-slate-500 hover:text-white text-sm transition-colors">+91 8766220922</a>
+                <a href="https://wa.me/918766220922" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white text-sm transition-colors">WhatsApp</a>
               </div>
             </div>
           </div>
