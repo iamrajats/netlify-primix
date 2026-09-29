@@ -135,7 +135,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div style={{ borderTop: '1px solid #1E1E3A' }} className="pt-8 text-center text-slate-600 text-sm">
-          © 2024 Primix Labs. All rights reserved.
+          © 2026 Primix Labs. All rights reserved.
         </div>
       </div>
     </footer>
