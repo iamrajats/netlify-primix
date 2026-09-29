@@ -8,8 +8,6 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
-  Menu,
-  X,
   Mail,
   Phone,
   MessageCircle,
@@ -19,85 +17,11 @@ import {
   Database,
   Activity,
 } from 'lucide-react'
+import { SiteLayout } from '../components/SiteLayout'
 
 export const Route = createFileRoute('/')({
   component: PrimixLabs,
 })
-
-// ─── Navbar ────────────────────────────────────────────────────────────────
-
-function Navbar() {
-  const [open, setOpen] = useState(false)
-
-  const links = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Solutions', href: '#solutions' },
-    { label: 'Capabilities', href: '#capabilities' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-  ]
-
-  return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50"
-      style={{ background: 'rgba(5,5,8,0.92)', WebkitBackdropFilter: 'blur(16px)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(30,30,58,0.8)', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
-    >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="flex items-center">
-          <img
-            src="/primix-wordmark.png"
-            alt="Primix Labs"
-            height={32}
-            className="primix-logo"
-            style={{ height: 32, width: 'auto', objectFit: 'contain', display: 'block' }}
-            draggable={false}
-          />
-        </a>
-
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <a key={l.label} href={l.href} className="text-sm font-medium text-slate-400 hover:text-white transition-colors">
-              {l.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90 hover:shadow-lg"
-            style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)', boxShadow: '0 0 20px rgba(59,130,246,0.3)' }}
-          >
-            Book a Consultation
-          </a>
-        </div>
-
-        {/* Mobile hamburger */}
-        <button className="md:hidden text-slate-400 hover:text-white" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden px-6 pb-6 flex flex-col gap-4" style={{ background: 'rgba(5,5,8,0.98)' }}>
-          {links.map((l) => (
-            <a key={l.label} href={l.href} className="text-sm font-medium text-slate-400 hover:text-white transition-colors py-2" onClick={() => setOpen(false)}>
-              {l.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="px-5 py-3 rounded-lg text-sm font-semibold text-white text-center"
-            style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
-            onClick={() => setOpen(false)}
-          >
-            Book a Consultation
-          </a>
-        </div>
-      )}
-    </nav>
-  )
-}
 
 // ─── Hero ──────────────────────────────────────────────────────────────────
 
@@ -761,62 +685,11 @@ function CTA() {
   )
 }
 
-// ─── Footer ────────────────────────────────────────────────────────────────
-
-function Footer() {
-  return (
-    <footer style={{ background: '#030305', borderTop: '1px solid #1E1E3A' }}>
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
-          <div>
-            <img
-              src="/logo-transparent.png"
-              alt="Primix Labs"
-              className="primix-logo"
-              style={{ maxWidth: 360, width: '100%', height: 'auto', display: 'block' }}
-              draggable={false}
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-12">
-            <div>
-              <p className="text-white font-semibold text-sm mb-4">Navigation</p>
-              <div className="flex flex-col gap-3">
-                {[
-                  { label: 'Solutions', href: '#solutions' },
-                  { label: 'Services', href: '#services' },
-                  { label: 'Capabilities', href: '#capabilities' },
-                  { label: 'About', href: '#about' },
-                ].map((l) => (
-                  <a key={l.label} href={l.href} className="text-slate-500 hover:text-white text-sm transition-colors">{l.label}</a>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="text-white font-semibold text-sm mb-4">Contact</p>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:hello@primixlabs.com" className="text-slate-500 hover:text-white text-sm transition-colors">hello@primixlabs.com</a>
-                <a href="tel:+918766220922" className="text-slate-500 hover:text-white text-sm transition-colors">+91 8766220922</a>
-                <a href="https://wa.me/918766220922" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white text-sm transition-colors">WhatsApp</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style={{ borderTop: '1px solid #1E1E3A' }} className="pt-8 text-center text-slate-600 text-sm">
-          © 2024 Primix Labs. All rights reserved.
-        </div>
-      </div>
-    </footer>
-  )
-}
-
 // ─── Main Page ─────────────────────────────────────────────────────────────
 
 function PrimixLabs() {
   return (
-    <div style={{ background: '#050508', minHeight: '100vh' }}>
-      <Navbar />
+    <SiteLayout>
       <Hero />
       <Services />
       <Solutions />
@@ -824,7 +697,6 @@ function PrimixLabs() {
       <Capabilities />
       <About />
       <CTA />
-      <Footer />
-    </div>
+    </SiteLayout>
   )
 }
