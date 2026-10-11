@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
-import { ArrowUpRight, Mail, MessageCircle, Phone } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { PageHero, SiteLayout } from '../components/SiteLayout'
 
 export const Route = createFileRoute('/contact')({ component: ContactPage })
@@ -19,6 +19,13 @@ const contactOptions = [
     detail: '+91 8766220922',
     href: 'tel:+918766220922',
     action: 'Make a call',
+  },
+  {
+    icon: MapPin,
+    label: 'Registered Office Address',
+    detail: '38, 1st Floor, Ashwini Layout, 2nd Main, Egipura, Bengaluru, Karnataka 560047',
+    href: 'https://maps.google.com/?q=38%2C+1st+Floor%2C+Ashwini+Layout%2C+2nd+Main%2C+Egipura%2C+Bengaluru%2C+Karnataka+560047',
+    action: 'Open location',
   },
   {
     icon: MessageCircle,

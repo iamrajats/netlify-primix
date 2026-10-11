@@ -129,6 +129,14 @@ export function SiteFooter() {
               <div className="flex flex-col gap-3">
                 <a href="mailto:hello@primixlabs.com" className="text-slate-500 hover:text-white text-sm transition-colors">hello@primixlabs.com</a>
                 <a href="tel:+918766220922" className="text-slate-500 hover:text-white text-sm transition-colors">+91 8766220922</a>
+                <a
+                  href="https://maps.google.com/?q=38%2C+1st+Floor%2C+Ashwini+Layout%2C+2nd+Main%2C+Egipura%2C+Bengaluru%2C+Karnataka+560047"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-500 hover:text-white text-sm transition-colors"
+                >
+                  38, 1st Floor, Ashwini Layout, 2nd Main, Egipura, Bengaluru, Karnataka 560047
+                </a>
                 <a href="https://wa.me/918766220922" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white text-sm transition-colors">WhatsApp</a>
               </div>
             </div>
